@@ -68,7 +68,7 @@ async function loadFooter() {
     const html = await res.text();
     document.getElementById("footer").innerHTML = html;
 
-    // footer 插入完成后，再手动创建 ClustrMaps 的 <script>
+    // footer visitor map
     const script = document.createElement("script");
     script.type = "text/javascript";
     script.id = "clustrmaps";
