@@ -129,6 +129,7 @@ body {
     align-items: center;
     gap: 28px;
     margin-left: 16px;
+    text-decoration: none;
 }
 
 .profile-info-socials a {
@@ -144,7 +145,7 @@ body {
 }
 
 .ai-google-scholar {
-    font-size: 30px !important;
+    font-size: 34px !important;
 }
 
 
@@ -344,7 +345,7 @@ body {
 /*Course Page Styles*/
 .course-list {
     margin: 30px 0 0 30px;
-} 
+}
 
 /* two parts: */
 .course-block {
@@ -387,4 +388,34 @@ body {
     padding: 0 10px;
     border-left: 3px solid #782F40;
     border-radius: 4px;
+}
+
+/* Visitor Map Section */
+.visitor-map-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1d4ed8;
+    margin-bottom: 16px;
+}
+
+.visitor-map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+#clustrmaps {
+    width: 100% !important;
+    max-width: 480px;
+}
+
+/* Footer Layout */
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
 }

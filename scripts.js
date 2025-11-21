@@ -6,7 +6,7 @@ async function loadHeader() {
 
 loadHeader();
 
-async function loadBio(){
+async function loadBio() {
     const res = await fetch("pages/home/bio.html");
     const html = await res.text();
     document.getElementById("bio").innerHTML = html;
@@ -14,7 +14,7 @@ async function loadBio(){
 
 loadBio();
 
-async function loadNews(){
+async function loadNews() {
     const res = await fetch("pages/home/news.html");
     const html = await res.text();
     document.getElementById("news").innerHTML = html;
@@ -22,7 +22,7 @@ async function loadNews(){
 
 loadNews();
 
-async function loadInterest(){
+async function loadInterest() {
     const res = await fetch("pages/research/interest.html");
     const html = await res.text();
     document.getElementById("interest").innerHTML = html;
@@ -30,7 +30,7 @@ async function loadInterest(){
 
 loadInterest();
 
-async function loadPublications(){
+async function loadPublications() {
     const res = await fetch("pages/research/publications.html");
     const html = await res.text();
     document.getElementById("publications").innerHTML = html;
@@ -39,7 +39,7 @@ async function loadPublications(){
 loadPublications();
 
 
-async function loadActivities(){
+async function loadActivities() {
     const res = await fetch("pages/research/activities.html");
     const html = await res.text();
     document.getElementById("activities").innerHTML = html;
@@ -47,7 +47,7 @@ async function loadActivities(){
 
 loadActivities();
 
-async function loadInstructor(){
+async function loadInstructor() {
     const res = await fetch("pages/teaching/instructor.html");
     const html = await res.text();
     document.getElementById("instructor").innerHTML = html;
@@ -55,10 +55,29 @@ async function loadInstructor(){
 
 loadInstructor();
 
-async function loadTA(){
+async function loadTA() {
     const res = await fetch("pages/teaching/ta.html");
     const html = await res.text();
     document.getElementById("ta").innerHTML = html;
 }
 
 loadTA();
+
+async function loadFooter() {
+    const res = await fetch("pages/footer.html");
+    const html = await res.text();
+    document.getElementById("footer").innerHTML = html;
+
+    // footer 插入完成后，再手动创建 ClustrMaps 的 <script>
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.id = "clustrmaps";
+    script.src = "https://clustrmaps.com/map_v2.js?d=qwJIKzEGVprb6acrG3-5YBIZVN2flTcQhUCKBJzTLJk&cl=ffffff&w=a";
+
+    const container = document.getElementById("visitor-map-container");
+    if (container) {
+        container.appendChild(script);
+    }
+}
+
+loadFooter();
